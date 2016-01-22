@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:util="http://www.springframework.org/schema/util" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+    <bean id="t" class="beans.TestProperties" scope="prototype">
+	    <property name="driver">
+	        <util:properties location="classpath:resources/Drivers.properties"/>
+	    </property>
+	  </bean>
+</beans>
+<!-- <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="t" class="beans.TestProperties" scope="prototype">
+	    <property name="driver">
+	        <props>
+	            <prop key="driverclass">oracle.jdbc.OracleDriver</prop>
+	            <prop key="url">OracleUrl</prop>
+	            <prop key="user">username</prop>
+	            <prop key="password">password</prop>
+	        </props>
+	    </property>
+	</bean>
+</beans> -->

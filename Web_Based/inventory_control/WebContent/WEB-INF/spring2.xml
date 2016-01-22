@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- <bean id="id1" name="n1" class="com.sj.model.Student">
+		<property name="sid" value="13"></property>
+		<property name="name" value="xyz"></property>
+	</bean> -->
+	  <bean id="id1" name="n1" class="com.mvc.bean.User">
+		<property name="userid" value="abc"></property>
+		<property name="name" value="xyz"></property>
+		<property name="password" value="xyz"></property>
+		<property name="phone" value="123"></property>
+	</bean>  
+	 <bean id="loginDao" 
+                class="com.mvc.connection.LoginDAO" >
+   		<property name="login" ref="id1"></property>
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   	</bean> 
+   	 <bean id="showall" 
+                class="com.mvc.connection.ProductDAO" >
+   		<!-- <property name="login" ref="id1"></property> -->
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   	</bean> 
+	<!-- <bean id="LoginDao" 
+                class="com.dao.LoginDAO" >
+   		<property name="student" ref="id1"></property>
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   	</bean> -->
+</beans>

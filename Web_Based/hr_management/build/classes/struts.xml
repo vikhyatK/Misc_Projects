@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd ">
+<struts>	
+	 <constant name="struts.devMode" value="false" />
+   	<constant name="struts.multipart.maxSize" value="1000000" />
+	<package name="basic" extends="tiles-default">
+		
+		<global-exception-mappings>
+         <exception-mapping exception="java.lang.Exception"
+         result="error" />
+      </global-exception-mappings>
+
+			
+		<action name="login" class="action.LoginStruts">
+			<result name="error" type="tiles">error.def</result>
+			<result name="input" type="tiles">login.def</result>
+			<result name="hr" type="tiles">hr.welcome.def</result>
+			<result name="admin" type="tiles">admin.welcome.def</result>
+     		<result name="iw" type="tiles">iw.welcome.def</result>
+     		<result name="app" type="tiles">app.welcome.def</result>
+		</action>	
+		
+		<action name="CreEmployee" class="action.CreateEmployee">
+			<result name="success">/basic/adminHome.jsp</result>
+			<result name="input" type="tiles">admin.createEmployee.def</result>
+		</action>
+		
+		<action name="ViewVac" class="action.ViewVacancyStruts">
+			<result name="success" type="tiles">view.vacancy.def</result>
+			 <result name="error" type="tiles">error.def</result>
+			
+		</action>
+		
+		<action name="edit" class="action.GetVacancy" >
+			<result name="success" type="tiles">hr.edit.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="editVacanc" class="action.EditVacancyAction">
+			<result name="success">/basic/hrHome.jsp</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="createvacancy" class="action.CreateVacancyStruts">
+			<result name="success" type="tiles">hr.welcome.def</result>
+			<result name="error" type="tiles">error.def</result>
+			<!-- <result name="input" type="tiles">create.vacancy.def</result> -->
+		</action>
+		
+		<action name="ChangePass" class="action.ChangePassword">
+			<result name="input" type="tiles">hr.changePass.def</result>
+			<result name="hr" type="tiles">hr.welcome.def</result>
+			<result name="app" type="tiles">app.welcome.def</result>
+			<result name="iw" type="tiles">iw.welcome.def</result>
+			<result name="admin" type="tiles">admin.welcome.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="iwChangePass" class="action.ChangePassword">
+			<result name="input" type="tiles">iw.changePass.def</result>
+			<result name="iw" type="tiles">iw.welcome.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="appChangePass" class="action.ChangePassword">
+			<result name="input" type="tiles">app.changePass.def</result>
+			<result name="app" type="tiles">app.welcome.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="adminChangePass" class="action.ChangePassword">
+			<result name="input" type="tiles">admin.changePass.def</result>
+			<result name="admin" type="tiles">admin.welcome.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="getEmploy" class="action.GetEmpDetails">
+			<result name="error" type="tiles">error.def</result>
+		 	<result name="hr" type="tiles">hr.updateProfile.def</result>
+			<result name="admin" type="tiles">admin.updateProfile.def</result>
+     		<result name="iw" type="tiles">iw.updateProfile.def</result>
+		</action>
+		
+		<action name="updateEmploy" class="action.EditEmployeeDetails">
+		 	<result name="hr">/basic/hrHome.jsp</result>
+			<result name="iw">/basic/iwHome.jsp</result>
+			<result name="admin">/basic/adminHome.jsp</result>
+			<result name="input" type="tiles">hr.updateProfile.def</result>
+	 		<result name="error" type="tiles">error.def</result> 
+		</action>
+		
+		<action name="iwupdateEmploy" class="action.EditEmployeeDetails">
+			<result name="iw">/basic/iwHome.jsp</result>
+			<result name="input" type="tiles">iw.updateProfile.def</result>
+	 		<result name="error" type="tiles">error.def</result> 
+		</action>
+		
+		<action name="adminUpdateEmploy" class="action.EditEmployeeDetails">
+			<result name="admin">/basic/adminHome.jsp</result>
+			<result name="input" type="tiles">admin.updateProfile.def</result>
+	 		<result name="error" type="tiles">error.def</result> 
+		</action>
+		
+		<action name="DispVac" class="action.FetchToAppVacancy">
+			<result name="success" type="tiles">hr.schdulevac.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="schedule" class="action.PerformSchedule">
+			<result name="success" type="tiles">hr.schdulevac.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		
+		<action name="getAppVac" class="action.SchduleInterviewProcess">
+			<result name="success" type="tiles">hr.attachschdule.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="applicant" class="action.CreateApplicant">
+			<result name="success" type="tiles">app.welcome.def</result>
+			<result name="input">../applicantRegisteration.jsp</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="getAppDetails" class="action.GetAppDetails">
+			<result name="success" type="tiles">app.updateProfile.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="updateapp" class="action.AppUpdateProfile">
+			<result name="success" type="tiles">app.welcome.def</result>
+			<result name="input" type="tiles">app.updateProfile.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="ViewVacancy" class="action.AppViewVacancy">
+			<result name="success" type="tiles">app.vacancy.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="applyvac" class="action.ApplyVacancyAction">
+			<result name="success" type="tiles">app.applyvacancy.def</result>
+			<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		
+		<action name="ViewSch" class="action.ViewSchedule">
+		 <result type="tiles">iw.viewSchedule.def</result>
+		 <result name="error" type="tiles">error.def</result>
+		</action>
+		
+		
+		
+		<action name="iwUpdateEmploy" class="action.EditEmployeeDetails">
+		 	<result name="hr">/basic/hrHome.jsp</result>
+			<result name="iw">/basic/iwHome.jsp</result>
+			<result name="admin">/basic/adminHome.jsp</result>
+			<result name="input" type="tiles">hr.updateProfile.def</result>
+	 		<result name="error" type="tiles">error.def</result> 
+		</action>
+		
+		<action name="iwApplicants" class="action.IwApplicants">
+		 <result type="tiles">iw.takeresult.def</result>
+		 <result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="confirmResult" class="action.ConfirmResult">
+		 <result type="tiles">iw.welcome.def</result>
+		 <result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<!-- <action name="result" class="action.Result">
+		 <result type="tiles">iw.takeresult.def</result>
+		</action> -->
+		
+		<action name="clerk">
+     		<result type="tiles">clerk.def</result>
+     		<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="manager">
+     		<result type="tiles">manager.def</result>
+     		<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="logoff">
+     		<result type="tiles">login.def</result>
+     		<result name="error" type="tiles">error.def</result>
+		</action>	
+		
+		<action name="searchapplicant" class="action.SearchApplicant">
+		<result name="success" type="tiles">hr.searchingapplicant.def</result>
+		<result name="input">../basic/SearchApplicant.jsp</result>
+		<result name="error" type="tiles">error.def</result>
+		</action>
+		
+		<action name="searchvacancy" class="action.SearchVacancy">
+		<result name="success" type="tiles">hr.searchingvacancy.def</result>
+		<result name="input">../basic/SearchVacancy.jsp</result>
+		<result name="error" type="tiles">error.def</result>
+		</action> 
+		
+		<action name="upload" class="action.uploadFile">
+       <result name="success" type="tiles">app.fileupload.def</result>
+       <result name="error" type="tiles">app.FileUpload_err.def</result>
+   		</action>
+		
+		<!-- <action name="radioButtonAction" 
+         class="action.RadioButtonAction" method="display">
+		<result name="none">pages/radiobutton.jsp</result>
+    </action> -->
+    
+   <!--<action name="searchapplicant" class="action.SearchApplicant">
+		<result name="success">/basic/DisplayApplicant.jsp</result>
+		</action>
+		
+		<action name="searchvacancy" class="action.SearchVacancy">
+		<result name="success">/basic/DisplaySingleVacancy.jsp</result>
+		</action>  -->
+		
+	</package>		
+</struts>

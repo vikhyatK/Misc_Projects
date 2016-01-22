@@ -1,0 +1,35 @@
+
+Requirement Statement:	"Implementation of the validation for unlocking pattern of an android phone"
+
+My Understanding:
+
+- The numbers present at the corners should not connect to each other directly
+
+- The numbers belonging to same column/row and having difference of more than one in column/ row respectively should not connect to each other directly
+
+- The pattern should have a minimum length of 3 and maximum length of 9
+
+- The pattern should not be null
+
+- There should be no repetition in of numbers in the sequence
+
+
+Assumptions:	The numbers are arranged in a 3x3 matrix
+
+Algorithm:
+		Attached coordinates to integers from 1 - 9 like they are in a 3x3 matrix
+		
+		First check the validty of the pattern:
+			- if it passes minimum and maximum length constraints
+			- if it passes the not null constraint
+			- if it has any repetition of digits
+		
+		Then check if numbers in the pattern entered follow two conditions:
+			- The numbers present at the corners should not connect to each other directly
+
+			- The numbers belonging to same column/row and having difference of more than one in column/ row respectively should 			  	  not connect to each other directly
+
+
+Testing Requirements:
+
+			-JUnit 4

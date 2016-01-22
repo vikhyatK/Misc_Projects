@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="login.def" template="/layout.jsp">    
+      <put-attribute name="title"  value="Login" type="string"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu" value="/mainmenu.jsp"/>
+      <put-attribute name="body"   value="/loginform.jsp"/>
+      <put-attribute name="footer" value="/footer.jsp"/>
+  </definition>    
+    
+  <definition name="hr.welcome.def" template="/layout.jsp">    
+      <put-attribute name="title"  value="Login Successfull - HR" type="string"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu" value="/hr_menu.jsp"/>
+      <put-attribute name="body"   value="/hrHomeForm.jsp"/>
+      <put-attribute name="footer" value="/footer.jsp"/>
+  </definition> 
+  
+  <definition name="admin.welcome.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="Login Successfull - Admin" type="string"/>
+      <put-attribute name="menu" value="/admin_menu.jsp"/>
+      <put-attribute name="body"   value="/hrHomeForm.jsp"/>
+  </definition> 
+  
+   <definition name="iw.welcome.def" template="/layout.jsp">    
+      <put-attribute name="title"  value="Login Successfull - Interviewer" type="string"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu" value="/iw_menu.jsp"/>
+      <put-attribute name="body"   value="/hrHomeForm.jsp"/> 
+      <put-attribute name="footer" value="/footer.jsp"/>
+  </definition>   
+  
+  <definition name="app.welcome.def" template="/layout.jsp">    
+      <put-attribute name="title"  value="Login Successfull - Applicant" type="string"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu" value="/app_menu.jsp"/>
+    <put-attribute name="body"   value="/hrHomeForm.jsp"/> 
+      <put-attribute name="footer" value="/footer.jsp"/>
+  </definition>  
+  
+  <definition name="admin.createEmployee.def" extends="admin.welcome.def">    
+      <put-attribute name="title"  value="Create Employee" type="string"/>
+      <put-attribute name="body"   value="/basic/createEmployeeForm.jsp"/>
+  </definition> 
+   
+   <definition name="admin.changePass.def" extends="admin.welcome.def">    
+      <put-attribute name="title"  value="Change Password" type="string"/>
+      <put-attribute name="body"   value="/adminchangePasswordForm.jsp"/>
+  </definition> 
+  
+  <definition name="admin.updateProfile.def" extends="admin.welcome.def">    
+      <put-attribute name="title"  value="Update Profile" type="string"/>
+      <put-attribute name="body"   value="/basic/adminEditEmployeeForm.jsp" />
+  </definition> 
+  
+   <definition name="app.fileupload.def" extends="app.welcome.def">    
+      <put-attribute name="title"  value="File uploaded" type="string"/>
+      <put-attribute name="body"   value="/success.jsp"/>
+      <put-attribute name="menu" value="/app_menu.jsp"/>
+      
+  </definition> 
+  
+  <definition name="app.FileUpload_err.def" extends="app.welcome.def">    
+      <put-attribute name="title"  value="error in upload" type="string"/>
+      <put-attribute name="body"   value="/FileUpload_err.jsp"/>
+      <put-attribute name="menu" value="/app_menu.jsp"/>
+      
+  </definition> 
+   
+   <definition name="app.create.def" extends="app.welcome.def">    
+      <put-attribute name="title"  value="Login Successfull - Applicant" type="string"/>
+      <put-attribute name="body"   value="/hrHomeForm.jsp"/>
+    <!--   <put-attribute name="menu" value="/app_menu.jsp"/> -->
+  </definition> 
+  
+  <definition name="app.updateProfile.def" extends="app.welcome.def">    
+      <put-attribute name="title"  value="Update Profile" type="string"/>
+      <put-attribute name="body"   value="/basic/updateApplicant.jsp"/>
+  </definition> 
+   
+  <definition name="view.vacancy.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="Vacancies" type="string"/>
+      <put-attribute name="body"   value="/basic/DisplayVacancy.jsp"/>
+  </definition> 
+ 
+  <definition name="hr.edit.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="Edit Vacancy" type="string"/>
+      <put-attribute name="body"   value="/basic/editVacancy.jsp"/>
+  </definition> 
+  
+  <definition name="create.vacancy.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="Create Vacancy" type="string"/>
+      <put-attribute name="body"   value="/vacancyForm.jsp"/>
+  </definition> 
+  
+  <definition name="hr.changePass.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="Change Password" type="string"/>
+      <put-attribute name="body"   value="/changePasswordForm.jsp"/>
+  </definition> 
+  
+  <definition name="hr.updateProfile.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="Update Profile" type="string"/>
+      <put-attribute name="body"   value="/basic/EditEmployeeForm.jsp" />
+  </definition> 
+  
+  <definition name="hr.schdulevac.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="Schdule Vacancy" type="string"/>
+      <put-attribute name="body"   value="/basic/selectVacancy.jsp" />
+  </definition> 
+  
+  <definition name="hr.attachschdule.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="Schdule Vacancy" type="string"/>
+      <put-attribute name="body"   value="/basic/ScheduleInterview.jsp" />
+  </definition> 
+  
+   <definition name="hr.searchingapplicant.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="View Applicant" type="string"/>
+      <put-attribute name="body"   value="/basic/DisplayApplicant.jsp" />
+  </definition> 
+  
+  <definition name="hr.searchingvacancy.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="View Vacancy" type="string"/>
+      <put-attribute name="body"   value="/basic/DisplaySingleVacancy.jsp" />
+  </definition> 
+  
+  <definition name="app.vacancy.def" extends="app.welcome.def">    
+      <put-attribute name="title"  value="Vacancies" type="string"/>
+      <put-attribute name="body"   value="/basic/appDisplayVacancy.jsp"/>
+  </definition> 
+  
+  <definition name="app.changePass.def" extends="app.welcome.def">    
+      <put-attribute name="title"  value="Change Password" type="string"/>
+      <put-attribute name="body"   value="/appchangePasswordForm.jsp"/>
+  </definition> 
+ 
+ <definition name="app.applyvacancy.def" extends="app.welcome.def">    
+      <put-attribute name="title"  value="Success" type="string"/>
+      <put-attribute name="body"   value="/basic/successApply.jsp"/>
+  </definition> 
+    
+ <definition name="iw.viewSchedule.def" extends="iw.welcome.def">    
+      <put-attribute name="title"  value="Success" type="string"/>
+      <put-attribute name="body"   value="/basic/iwViewInterviewSch.jsp"/>
+  </definition> 
+    
+     <definition name="iw.changePass.def" extends="iw.welcome.def">    
+      <put-attribute name="title"  value="Change Password" type="string"/>
+      <put-attribute name="body"   value="/iwchangePasswordForm.jsp"/>
+  </definition> 
+    
+    <definition name="iw.updateProfile.def" extends="iw.welcome.def">    
+      <put-attribute name="title"  value="Update Profile" type="string"/>
+      <put-attribute name="body"   value="/basic/iwEditEmployeeForm.jsp" />
+  </definition> 
+  
+    <definition name="iw.takeresult.def" extends="iw.welcome.def">    
+      <put-attribute name="title"  value="Success" type="string"/>
+      <put-attribute name="body"   value="/basic/iwResult.jsp"/>
+  </definition> 
+    
+  <definition name="manager.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="www.simplylogin.com - Manager" type="string"/>
+       <put-attribute name="body"   value="/actionbody.jsp"/>
+  </definition>   
+  
+  <definition name="clerk.def" extends="hr.welcome.def">    
+      <put-attribute name="title"  value="www.simplylogin.com - Clerk" type="string"/>
+      <put-attribute name="menu" value="/clerk_menu.jsp"/>
+  </definition> 
+  
+ <definition name="error.def"  extends="login.def">
+ 	<put-attribute name="title"  value="Custom errror page" type="string"/>
+  <put-attribute name="body"   value="/error.jsp"/>
+  </definition>
+     
+</tiles-definitions>

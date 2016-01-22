@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mvc.bean.User" 
+        table="User" >
+ 
+        <id name="userid" type="string">
+            <column name="userId" />
+            <generator class="assigned" />
+        </id>
+         <property name="name" type="string">
+            <column name="name" length="1"  />
+        </property> 
+        <property name="password" type="string">
+            <column name="password" length="8" />
+        </property>
+         <property name="phone" type="integer">
+            <column name="contactNo" length="8" />
+        </property>
+    </class>
+     <class name="com.mvc.bean.Product" 
+        table="product" >
+ 
+        <id name="id" type="integer">
+            <column name="productId" />
+            <generator class="assigned" />
+        </id>
+        
+         <property name="name" type="string">
+            <column name="productName" length="10"  />
+        </property> 
+        <property name="price" type="integer">
+            <column name="productPrice" length="5" />
+        </property>
+         <property name="quantity" type="integer">
+            <column name="productQuantity" length="8" />
+        </property>
+            <property name="status" type="string">
+            <column name="productStatus" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mvc.bean.Owners" 
+        table="owners" >
+ 
+        <id name="own_id" type="int">
+            <column name="own_id" />
+            <generator class="native" />
+        </id>
+        <property name="own_fname" type="string">
+            <column name="own_fname" />
+        </property>
+        <property name="own_lname" type="string">
+            <column name="own_lname" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" />
+        </property>
+        <property name="telephone" type="int">
+            <column name="telephone" />
+        </property>
+       
+        
+    </class>
+</hibernate-mapping>

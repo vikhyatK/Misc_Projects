@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+	<project name="Test" basedir="." >
+    <property name="lib.dir" value="./lib" />
+    <property name="src.dir" value="./src" />
+    
+    <!-- Compilation Settings. -->
+    <property name="debug" value="true" />
+    <property name="memory.javac.initial" value="64M" />
+    <property name="memory.javac.max" value="128M" />
+    <property name="apiserver" value="localhost" />
+    <property name="port" value="8080" />
+    <property name="ws.url" value="http://${apiserver}:${port}/WebserviceApp/services" />
+    <property name="ws.mapping.namespace" value="http://service.wsapp.guru.com" />
+    <property name="ws.model.namespace" value="http://model.wsapp.guru.com" />
+
+	<!-- Classpath. -->
+	<path id="classpath">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+        <fileset dir="${ant.home}/lib">
+          <include name="*.jar" />
+        </fileset>
+	</path>
+
+    <target name=".setup-taskdefs">
+	  <taskdef resource="axis-tasks.properties" classpathref="classpath"/>
+	</target>
+    
+       <target name="generate-axis-stubs" depends=".setup-taskdefs">
+
+        <echo message="Generating Axis Stubs!"/>
+           <echo message="Generating stubs for Employee"/>
+
+         <axis-wsdl2java output="${src.dir}" url="${ws.url}/EmployeeService?wsdl" verbose="true">
+            <mapping namespace="${ws.mapping.namespace}" package="com.guru.test.service" />
+            <mapping namespace="${ws.model.namespace}" package="com.guru.test.model" />
+         </axis-wsdl2java>
+
+	  </target>
+
+
+</project>

@@ -1,0 +1,199 @@
+April appraisal period data : 
+
+1. Worked on review comments for Custom Field user story
+
+2. Worked on additional export template code user story
+
+3. Fixed Memory monitoring issue
+
+4. Fixed all the JUnit test cases and made result 100%
+
+5. Worked on re-factorization of majority of DB queries in the project.
+
+6. Worked in production support twice and at one instance before the scheduled time
+
+7. Customer issues resolved during Production Support role
+
+8. Tasks performed during Build Engineer role
+
+9. Took RampUps of new team mates
+
+10. Attended Spring MVC training
+
+11. Attended Johari Window training
+
+12. Attended QMS Awareness training
+
+13. Attended the RBT training for CC
+ 
+14. Achieved the Targeted Assignments/KRA
+
+
+
+
+April appraisal period data : 
+
+1. Worked on review comments for Custom Field user story:
+In review comments I was asked to incorporate some changes which I already suggested
+in the design document to the client. These changes were initially rejected in the meeting.
+
+2. Worked on additional export template code user story :
+Prepared design doc for this user story and made code changes for the same. The code changes were not straight forward and I had to take care of the existing functionality while making changes. I completed and delivered this user story in time.
+
+3. Fixed Memory monitoring issue :
+Team was dealing with this issue for a long time and I got the responsibility to fix it. Though I had to undergo a Hand-over Take-over session from a senior team-mate before fixing this issue, after the session I fixed this issue without any troubles.
+
+4. Fixed all the JUnit test cases and made result 100% :
+During this user story, despite of the check-ins which broke nearly 85% of test cases. I fixed them all and made the result 100%.
+
+5. Worked on re-factorization of majority of DB queries in the project.
+The queries which implemented in the code earlier were making the application really slow. I got the opportunity to modify these queries in respect to increase the responsiveness of the application. Due to the vastness of the scope of these changes I had to take extra precautions while doing modifications. Though the task was pretty tough, I successfully completed it in time and delivered a faster application.
+
+6. Worked in production support twice and at one instance before the scheduled time : 
+As the team was fixing a high priority customer issue and resources were not available for production support. So, in order to support team in crisis phase I swapped my schedule with other team mate who was required for fixing customer issue.
+
+7. Customer issues resolved during production support role :
+a. Clients were facing issues which were browser specific. Made a fix for that within the same day.
+b. Clients were facing latency issues at a specific section of the application. I fixed this issue but later it was discovered that the actual issue that client was facing was different. So had to revert back my changes and re-implement the solution.
+c. While investigating a customer issue, found a bug in the code and fixed it.
+
+8. Tasks performed during Build Engineer role :
+a. I was in this role twice during this appraisal period and deployed build on the server for 4 weeks daily.
+b. I also deployed Beta build twice on the server.
+c. With the guidance of a senior team-mate I learnt to deploy Production build as well.
+
+9. Took RampUps of new team mates :
+In this appraisal cycle I took RampUps of new team mates. Though few of the ramp ups were not assigned to me, but when I was asked to take them on a short notice, I successfully delivered my best.
+
+10. Attended Spring MVC training:
+Learnt Spring architecture and its implementation in detail and successfully completed the training with enhanced knowledge and good grades.
+
+11. Attended Johari Window training:
+During this training I discovered all the good and bad qualities of mine. As a corrective measure I tried to improve on bad ones by changing my day to day dealing with colleagues in a positive way and taking feedbacks from them as and when possible.
+
+12. Attended QMS Awareness training:
+In this training I learnt about all the processes and process related templates that are currently followed at Horizontal, Project Management and at Department level in Cybage and applied them to my work profile successfully.
+
+13. Attended the RBT training for CC: In this training I got to learn all the responsibilities of CC and the tasks that he needs to perform. This training helped me in conducting Audits at a much faster rate and with ease.
+
+14. Achieved the Targeted Assignments/KRA :
+I successfully achieved almost every KRA set for me in the previous appraisal meeting. I have grown professionally and personally during this appraisal cycle. I have sharpened my technical skills by working hard in the project and with the invaluable guidance/inputs from team-mates.
+I wanted to go for the certification but the process for it has changed tremendously and needs more time than one appraisal cycle.
+
+
+
+
+
+
+April appraisal period data : 
+Junit user story took longer time than expected
+
+
+
+
+April appraisal period data : 
+Junit user story took longer time than expected: 
+Due to all the check-ins made by team during its completion time which broke majority of the test cases. I worked on the original test cases as well as fixed the newly broken one. Though it took time for actual results to show up, I didn't give up on this task.
+
+
+
+
+April appraisal period data :
+1. DC_DSM
+
+April appraisal period data :
+1. The actual issue was revealed late
+
+April appraisal period data :
+1. I made a fix for customer issue described in the ticket but it was revealed later during code review that the actual issue client is facing is something else which was nowhere mentioned in the ticket. So i had to revert the changes and re-implement the solution for the real issue.
+
+
+
+April appraisal period data :
+Name: DC_DSM
+Tasks:
+1. Conducted CC Audits
+2. Code Review Tool replacement
+
+April appraisal period data :
+1.Configuration Controller: 
+Early in this appraisal cycle I was given the responsibility of CC and since then I have conducted 4 Audits successfully. Three of these audits I conducted were conducted without attending any role based training for this role. In almost all of them the audit score for my project was 100%.
+Also, along with the audits I made sure that team attends QMS quiz as well and gets good grades.
+
+2. Code review tool:
+I was given the responsibility to search and implement a replacement for the currently used code review tool provided by the client. I started working on this task parallel to my project user stories and delivered the tool to the team after thorough testing.
+
+
+
+
+
+April appraisal period data : 
+1. I am keen to gain knowledge about new technologies.
+
+2. I have good understanding with my teammates.
+
+3. I don't give up easily and don't back down.
+
+4. I am Optimistic.
+
+
+
+April appraisal period data :
+
+1. I have a low grasping power and don't get the hang of concepts quickly. I am working at this front and trying to improve day by day.
+
+
+April appraisal period data : 
+1. Effective support from seniors and peers.
+
+2. Healthy and energetic environment within the team.
+
+3. Each team member has willingness to learn new things, this motivates me a lot.
+
+
+
+
+April appraisal period data : 
+1. Learned QMS processes:
+During this appraisal cycle I have learned how to prepare different 
+documents related to processes which lie under Project Management and Horizontal level.
+
+2. Became aware and fulfilled my responsibilities as a Production Support Engineer, Build Engineer and Configuration Controller of the team.
+
+3. Learned Spring Framework successfully.
+
+
+April appraisal period data :
+1. Achieve proficiency in using Ant.
+
+2. Effectively apply all the QMS standards in my work profile.
+
+3. Achieve expertise in performing Production Support Role.
+
+
+
+April appraisal period data : 
+I have a strong grip on the technologies that I have learnt till date. As every project implies technology by moulding it requirements specifically, I have tried to apply my knowledge according to the requirements and style of coding followed in the project. I try to learn new things each day.
+
+
+
+April appraisal period data : 
+In this appraisal cycle I got accommodated fully with the project environment and this helped in efficiently achieving all the tasks that were assigned to me.
+
+
+April appraisal period data : 
+I underwent process related trainings to improve at this front and have successfully abide to the process related rules.
+
+
+April appraisal period data : 
+I really work hard in order to deliver the task given to me on time. While completing the task I set my own standards and try my best to deliver bug free code.
+
+
+
+April appraisal period data : 
+I have a good command over communication skills and I have learnt from my team-mates, the way to communicate better during client calls. I am constantly working on it.
+
+
+
+April appraisal period data : 
+I try to understand the issues of other people first and then try to relate with them in the most polite and healthy way that I can.
