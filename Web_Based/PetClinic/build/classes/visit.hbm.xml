@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.mvc.bean.Visit" 
+        table="visits" >
+ 
+        <id name="visit_id" type="int">
+            <column name="visit_id" />
+            <generator class="native" />
+        </id>
+        <property name="pet_id" type="int">
+            <column name="pet_id" />
+        </property>
+        <property name="vet_id" type="int">
+            <column name="vet_id" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="date" type="date">
+            <column name="visit_date" />
+        </property>
+       
+        
+    </class>
+</hibernate-mapping>
