@@ -15,16 +15,34 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.store.locator.model.Store;
-import com.store.locator.service.StoreServiceImpl;
+import com.store.locator.service.IStoreService;
 
 @RestController
 public class StoreController {
 
 	@Autowired
-	StoreServiceImpl storeService; 
+	IStoreService storeService;
+
+	/**
+	 * This method gets all stores in the vicinity of the given zip code and
+	 * radius
+	 * 
+	 * @return
+	 */
+	@RequestMapping(value = "/store/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Store> getStore(@PathVariable("id") long id) {
+		System.out.println("Finding All Stores in vicinity");
+		Store store = storeService.findById(id);
+		if (store == null) {
+            System.out.println("Store with id " + id + " not found");
+            return new ResponseEntity<Store>(HttpStatus.NOT_FOUND);
+        }
+		return new ResponseEntity<Store>(store, HttpStatus.OK);
+	}
 
 	/**
 	 * Creates a new store
+	 * 
 	 * @param store
 	 * @param ucBuilder
 	 * @return
@@ -42,6 +60,7 @@ public class StoreController {
 
 	/**
 	 * Updates an existing store
+	 * 
 	 * @param id
 	 * @param store
 	 * @return
@@ -64,6 +83,7 @@ public class StoreController {
 
 	/**
 	 * Deletes an existing store
+	 * 
 	 * @param id
 	 * @return
 	 */
@@ -80,11 +100,14 @@ public class StoreController {
 	}
 
 	/**
+	 * This method gets all stores in the vicinity of the given zip code and
+	 * radius
 	 * 
 	 * @return
 	 */
 	@RequestMapping(value = "/store", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<Store>> deleteAllStores(@RequestParam("zipcode") String zipcode, @RequestParam("radius") long radius) {
+	public ResponseEntity<List<Store>> getStores(@RequestParam("zipcode") String zipcode,
+			@RequestParam("radius") long radius) {
 		System.out.println("Finding All Stores in vicinity");
 		List<Store> storesList = storeService.findStoresByVicinity(zipcode, radius);
 		return new ResponseEntity<List<Store>>(storesList, HttpStatus.NO_CONTENT);

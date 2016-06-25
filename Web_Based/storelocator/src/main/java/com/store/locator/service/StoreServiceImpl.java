@@ -5,9 +5,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.store.locator.model.Store;
 import com.store.locator.util.FileUtil;
 
+@Service("storeService")
+@Transactional
 public class StoreServiceImpl implements IStoreService{
 
     private static final AtomicLong counter = new AtomicLong();
@@ -51,7 +56,7 @@ public class StoreServiceImpl implements IStoreService{
 
 
 	private static Map<Long, Store> populateDummyStores() {
-		return FileUtil.getDummyStores("file/storesData.txt");
+		return FileUtil.getDummyStores("files/storesData.txt");
 	}
 
 }
