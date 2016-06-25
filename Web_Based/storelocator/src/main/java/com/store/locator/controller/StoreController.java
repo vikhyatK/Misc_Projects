@@ -31,12 +31,12 @@ public class StoreController {
 	 */
 	@RequestMapping(value = "/store/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Store> getStore(@PathVariable("id") long id) {
-		System.out.println("Finding All Stores in vicinity");
+		System.out.println("Finding store by id");
 		Store store = storeService.findById(id);
 		if (store == null) {
-            System.out.println("Store with id " + id + " not found");
-            return new ResponseEntity<Store>(HttpStatus.NOT_FOUND);
-        }
+			System.out.println("Store with id " + id + " not found");
+			return new ResponseEntity<Store>(HttpStatus.NOT_FOUND);
+		}
 		return new ResponseEntity<Store>(store, HttpStatus.OK);
 	}
 

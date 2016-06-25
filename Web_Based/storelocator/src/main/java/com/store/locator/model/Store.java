@@ -1,18 +1,20 @@
 package com.store.locator.model;
 
+import java.math.BigDecimal;
+
 public class Store {
 
 	private long id;
 	private String name;
 	private String address;
-	private String latitude;
-	private String longitude;
+	private BigDecimal latitude;
+	private BigDecimal longitude;
 
 	public Store() {
 		id = 0;
 	}
 
-	public Store(long id, String name, String address, String latitude, String longitude) {
+	public Store(long id, String name, String address, BigDecimal latitude, BigDecimal longitude) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -45,19 +47,19 @@ public class Store {
 		this.address = address;
 	}
 
-	public String getLatitude() {
+	public BigDecimal getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(String latitude) {
+	public void setLatitude(BigDecimal latitude) {
 		this.latitude = latitude;
 	}
 
-	public String getLongitude() {
+	public BigDecimal getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(String longitude) {
+	public void setLongitude(BigDecimal longitude) {
 		this.longitude = longitude;
 	}
 

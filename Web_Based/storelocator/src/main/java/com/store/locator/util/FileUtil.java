@@ -2,6 +2,7 @@ package com.store.locator.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -22,7 +23,9 @@ public class FileUtil {
 		try(Scanner scanner = new Scanner(file)) {
 			while(scanner.hasNextLine()) {
 				String[] line = scanner.nextLine().split("##!##");
-				Store store = new Store(Long.valueOf(line[0]), line[3], line[4], line[2], line[1]);
+				BigDecimal lat = BigDecimal.valueOf(Double.valueOf(line[2]));
+				BigDecimal lng = BigDecimal.valueOf(Double.valueOf(line[1]));
+				Store store = new Store(Long.valueOf(line[0]), line[3], line[4], lat, lng);
 				stores.put(store.getId(), store);
 			}
 			scanner.close();
