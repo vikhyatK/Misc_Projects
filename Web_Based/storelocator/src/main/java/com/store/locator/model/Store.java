@@ -51,16 +51,16 @@ public class Store {
 		return latitude;
 	}
 
-	public void setLatitude(BigDecimal latitude) {
-		this.latitude = latitude;
+	public void setLatitude(double latitude) {
+		this.latitude = BigDecimal.valueOf(latitude);
 	}
 
 	public BigDecimal getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(BigDecimal longitude) {
-		this.longitude = longitude;
+	public void setLongitude(double longitude) {
+		this.longitude = BigDecimal.valueOf(longitude);
 	}
 
 	@Override

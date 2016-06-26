@@ -75,8 +75,8 @@ public class StoreController {
 		}
 		currentStore.setName(store.getName());
 		currentStore.setAddress(store.getAddress());
-		currentStore.setLatitude(store.getLatitude());
-		currentStore.setLongitude(store.getLongitude());
+		currentStore.setLatitude(store.getLatitude().doubleValue());
+		currentStore.setLongitude(store.getLongitude().doubleValue());
 		storeService.updateStore(currentStore);
 		return new ResponseEntity<Store>(currentStore, HttpStatus.OK);
 	}
