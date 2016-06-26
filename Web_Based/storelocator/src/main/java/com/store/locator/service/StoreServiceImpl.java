@@ -43,9 +43,10 @@ public class StoreServiceImpl implements IStoreService {
 	}
 
 	@Override
-	public void saveStore(Store store) {
+	public Store saveStore(Store store) {
 		store.setId(counter.incrementAndGet());
 		stores.put(store.getId(), store);
+		return store;
 	}
 
 	@Override

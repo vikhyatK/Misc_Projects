@@ -10,7 +10,7 @@ public interface IStoreService {
 	
 	public boolean isStoreExist(Store store);
 
-	public void saveStore(Store store);
+	public Store saveStore(Store store);
 	
 	public void updateStore(Store store);
 	

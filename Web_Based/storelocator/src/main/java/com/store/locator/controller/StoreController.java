@@ -3,6 +3,7 @@ package com.store.locator.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -24,23 +25,6 @@ public class StoreController {
 	IStoreService storeService;
 
 	/**
-	 * This method gets all stores in the vicinity of the given zip code and
-	 * radius
-	 * 
-	 * @return
-	 */
-	@RequestMapping(value = "/store/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Store> getStore(@PathVariable("id") long id) {
-		System.out.println("Finding store by id");
-		Store store = storeService.findById(id);
-		if (store == null) {
-			System.out.println("Store with id " + id + " not found");
-			return new ResponseEntity<Store>(HttpStatus.NOT_FOUND);
-		}
-		return new ResponseEntity<Store>(store, HttpStatus.OK);
-	}
-
-	/**
 	 * Creates a new store
 	 * 
 	 * @param store
@@ -54,8 +38,10 @@ public class StoreController {
 			System.out.println("A Store with name " + store.getName() + " already exist");
 			return new ResponseEntity<Void>(HttpStatus.CONFLICT);
 		}
-		storeService.saveStore(store);
-		return new ResponseEntity<Void>(HttpStatus.CREATED);
+		store = storeService.saveStore(store);
+		HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(ucBuilder.path("/store/{id}").buildAndExpand(store.getId()).toUri());
+		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
 	}
 
 	/**
@@ -110,7 +96,7 @@ public class StoreController {
 			@RequestParam("radius") long radius) {
 		System.out.println("Finding All Stores in vicinity");
 		List<Store> storesList = storeService.findStoresByVicinity(zipcode, radius);
-		return new ResponseEntity<List<Store>>(storesList, HttpStatus.NO_CONTENT);
+		return new ResponseEntity<List<Store>>(storesList, HttpStatus.OK);
 	}
 
 }
