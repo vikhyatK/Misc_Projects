@@ -74,15 +74,15 @@ public class StoreController {
 	 * @return
 	 */
 	@RequestMapping(value = "/store/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Store> deleteStore(@PathVariable("id") long id) {
+	public ResponseEntity<Void> deleteStore(@PathVariable("id") long id) {
 		System.out.println("Fetching & Deleting Store with id " + id);
 		Store store = storeService.findById(id);
 		if (store == null) {
 			System.out.println("Unable to delete. Store with id " + id + " not found");
-			return new ResponseEntity<Store>(HttpStatus.NOT_FOUND);
+			return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
 		}
 		storeService.deleteStore(id);
-		return new ResponseEntity<Store>(HttpStatus.NO_CONTENT);
+		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 	}
 
 	/**
